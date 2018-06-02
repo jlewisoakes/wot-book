@@ -24,7 +24,7 @@ exports.stop = function () {
   console.info('%s plugin stopped!', pluginName);
 };
 
-exports.switchOnOff(value) {
+exports.switchOnOff = function (value) {
   if (!localParams.simulate) {
     actuator.write(value === true ? 1 : 0, function () { //#C
       console.info('Changed value of %s to %s', pluginName, value);
